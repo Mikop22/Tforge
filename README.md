@@ -88,8 +88,6 @@ The skill will:
 5. Pick the best item + projectile sprite
 6. Inject and tell you the crafting recipe
 
-If a candidate fails compile or the deterministic reviewer, the skill respawns the Coder with the specific errors. The compile + reviewer loop shares a global 6-attempt budget.
-
 ## Setup
 
 ### Prerequisites
@@ -215,12 +213,4 @@ the-forge/
 └── archive/                      # legacy Go TUI + monolithic Python orchestrator
 ```
 
-## Troubleshooting
-
-| Symptom | Fix |
-|---|---|
-| `/mcp` shows `forge` as `failed` | Restart Claude Code so it picks up `.mcp.json` and `mcp_server_start.sh` |
-| `ModuleNotFoundError: No module named 'mcp'` | Run `agents/.venv/bin/pip install -r agents/requirements.txt` |
-| `art_direction` import error during sprite gen | numpy in your venv is broken; rebuild the venv from scratch |
-| Compile loop exhausts 6 attempts | Surface the errors to the user; usually a manifest/codegen mismatch the reviewer can't fix mechanically |
 | `ForgeConnector` offline warning | Make sure tModLoader is running with the mod enabled before `/forge` reaches the inject step |

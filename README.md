@@ -49,9 +49,6 @@ flowchart LR
     style TIER fill:#0f172a,color:#fff
     style GAME fill:#065f46,color:#fff,stroke:#022c22,stroke-width:2px
 ```
-
-`.claude/skills/forge.md` runs the orchestration. It picks a tier from the prompt, dispatches subagents with the appropriate model for each role, calls four MCP tools, and `ForgeConnector` (a tModLoader mod watching `forge_inject.json`) drops the item into your running game.
-
 ### Subagent model assignments
 
 | Subagent | Model | Why |

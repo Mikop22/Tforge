@@ -46,6 +46,3 @@ cd the-forge
 claude --plugin-dir .
 ```
 
-## Technical Details
-
-Architecture, MCP tools, supported item types, environment overrides, project layout, and troubleshooting live in [TECHNICAL.md](TECHNICAL.md).
